@@ -254,7 +254,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90deg, #000, #fff, #2c2c2c);
   background-repeat: no-repeat;
   background-size: 80%;
-  animation: animate 4s linear infinite;
+  animation: animate 7s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 
