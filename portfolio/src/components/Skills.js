@@ -44,11 +44,11 @@ function Skills() {
               >
                 <div className="item">
                   <img src={html5} alt="ima" />
-                  <h5>Html 5</h5>
+                  <h5>HTML 5</h5>
                 </div>
                 <div className="item">
                   <img src={css3} alt="ima" />
-                  <h5>Css 3</h5>
+                  <h5>CSS 3</h5>
                 </div>
                 <div className="item">
                   <img src={js} alt="ima" />
