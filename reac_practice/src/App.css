@@ -1,0 +1,34 @@
+* {
+  background-color: #2b2f36;
+  color: aliceblue;
+
+}
+body {
+  background-color: #2b2f36;
+}
+
+.todoForm {
+ padding: 50px ;
+}
+.goal-item {
+  margin: 1rem 0;
+  background: #b5b5b5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  color: rgb(0, 0, 0);
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.goal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes strikethrough {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
