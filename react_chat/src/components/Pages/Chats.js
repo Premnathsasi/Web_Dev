@@ -27,10 +27,9 @@ const Chats = () => {
     dispatch({type: 'CHANGE_USER', payload:e})
   };
 
-  console.log(Object.entries(chats))
   return (
     <div className={classes.chats}>
-      {Object.entries(chats)?.sort((a,b) => b[1].date - a[1].date).map((chat) => (
+      { chats && Object.entries(chats)?.sort((a,b) => b[1].date - a[1].date).map((chat) => (
         <div className={classes.userChat} key={chat[0]} onClick={() => handleSelect(chat[1].userInfo)}>
         <img
           className={classes.img}

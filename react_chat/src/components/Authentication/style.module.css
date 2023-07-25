@@ -41,6 +41,10 @@
   border: none;
   cursor: pointer;
 }
+
+.formWrapper button:hover{
+  background-color: #5179ff;
+}
 .formWrapper img {
   width: 40px;
 }

@@ -11,9 +11,7 @@ const Message = ({message}) => {
   const ref = useRef();
   useEffect(() => {
     ref.current?.scrollIntoView({behaviour:"smooth"})
-    console.log(message.date.seconds)
   },[message])
-  console.log(message)
   const msg = `${classes.message} ${classes.owner}`;
 
  let secs = message.date.seconds;

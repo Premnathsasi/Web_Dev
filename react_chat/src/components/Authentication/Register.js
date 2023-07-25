@@ -3,12 +3,15 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { db, storage, auth } from "../../Firebase";
+import Spinner from "../Ui/Spinner";
 import classes from "./style.module.css";
 import Add from './man.png';
 import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [err, setErr] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+
   const navigate = useNavigate()
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -17,6 +20,7 @@ const Register = () => {
     const password = e.target[2].value;
     const file = e.target[3].files[0];
     try {
+      setLoading(true)
       const res = await createUserWithEmailAndPassword(auth, email, password);
       console.log(res);
       const storageRef = ref(storage, displayName);
@@ -52,6 +56,7 @@ const Register = () => {
     } catch (err) {
       setErr(true);
     }
+    setLoading(false)
   };
 
   return (
@@ -69,7 +74,7 @@ const Register = () => {
             <span>Add an avatar</span>
           </label>
 
-          <button>Sign Up</button>
+          <button>{isLoading ? <Spinner /> : `Sign Up`}</button>
           {err && <span>Something went wrong...</span>}
         </form>
         <p>Already have an account? <Link to='/'>Login</Link> </p>

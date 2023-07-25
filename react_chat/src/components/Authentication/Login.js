@@ -2,10 +2,12 @@ import React, { useRef, useState } from 'react';
 import classes from'./style.module.css';
 import {signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase';
+import Spinner from '../Ui/Spinner';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [err, setErr] = useState(false);
+    const [isLoading, setLoading] = useState(false)
     const mailInput = useRef();
     const passwordInput = useRef();
     const navigate = useNavigate();
@@ -14,6 +16,7 @@ const Login = () => {
         const email = mailInput.current.value
         const password = passwordInput.current.value
         try {
+            setLoading(true)
             await signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
@@ -27,7 +30,7 @@ const Login = () => {
             setErr(true)
         }
        
-          
+          setLoading(false);
         
     };
     return (
@@ -38,7 +41,7 @@ const Login = () => {
                 <form onSubmit={handleSignIn}>
                     <input type='email' placeholder='email' ref={mailInput}/>
                     <input type='password' placeholder='password' ref={passwordInput}/>
-                    <button type='submit'>Sign in</button>
+                    <button type='submit'>{isLoading ? <Spinner /> : `Sign in`}</button>
                     {err && <span>Something went wrong...</span>}
 
                 </form>
