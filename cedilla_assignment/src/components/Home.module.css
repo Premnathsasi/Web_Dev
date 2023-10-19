@@ -1,0 +1,90 @@
+.container {
+  background: url("../assets/img/img1.jpg");
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.content {
+  width: 40%;
+  position: absolute;
+  color: white;
+  margin: 0 15%;
+  top: 35%;
+}
+
+.content button {
+  padding: 7px 10px;
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(192, 26, 51);
+  border: none;
+}
+
+.content h1 {
+  font-weight: 700;
+}
+
+.content p {
+  color: rgb(203, 21, 21);
+  font-weight: 500;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -75px;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  margin: 0 15px;
+  padding: 20px;
+  box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.card span {
+  color: rgb(20, 20, 62);
+}
+
+@media (max-width: 720px) {
+  .container {
+    background: url("../assets/img/img1.jpg") no-repeat;
+    background-size: contain;
+  }
+
+  .content {
+    width: 70%;
+    position: absolute;
+    color: white;
+    margin: 0 7%;
+    top: 9%;
+  }
+
+  .cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: absolute;
+    gap: 10px;
+    bottom: -115px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1028px) {
+  .container {
+    background: url("../assets/img/img1.jpg") no-repeat;
+    background-size: contain;
+  }
+  .content {
+    width: 70%;
+    position: absolute;
+    color: white;
+    margin: 0 7%;
+    top: 17%;
+  }
+}

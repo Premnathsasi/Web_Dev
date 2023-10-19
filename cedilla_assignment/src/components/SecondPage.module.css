@@ -1,0 +1,269 @@
+.container {
+  position: absolute;
+  top: 125%;
+  width: 100%;
+}
+
+.container h6 {
+  text-align: center;
+  color: rgb(179, 13, 38);
+}
+
+.container h1 {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.main {
+  margin: 5% 15%;
+  display: flex;
+}
+
+.imageDiv {
+  flex: 1;
+}
+.imageDiv img {
+  width: 85%;
+}
+
+.contentDiv {
+  flex: 1;
+}
+
+.contentDiv h5 {
+  font-weight: 600;
+}
+
+.contents {
+  display: grid;
+  margin: 25px 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.contents .content {
+  border-left: 2px solid red;
+  box-shadow: 0 8px 8px -4px lightblue;
+  padding: 10px;
+}
+
+.challengeContent {
+  background: rgb(23, 23, 28);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 23, 28, 1) 0%,
+    rgba(1, 1, 36, 1) 92%,
+    rgba(5, 50, 59, 1) 100%
+  );
+}
+
+.challengeContent p {
+  text-align: center;
+  color: white;
+  padding: 20px 10px;
+}
+
+.challengeContent h2 {
+  text-align: center;
+  color: white;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  margin: 25px 10px 50px 10px;
+  width: 250px;
+  padding: 20px;
+}
+.serviceContent {
+  margin: 5% 15%;
+}
+
+.serviceContent p {
+  text-align: center;
+  color: rgb(179, 13, 38);
+  font-weight: 500;
+}
+
+.serviceContent h2 {
+  text-align: center;
+  text-align: center;
+  width: 70%;
+  margin: 10px auto;
+  font-weight: 800;
+}
+
+.imageContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContent img {
+  width: 255px;
+  margin: 3em 10px;
+  background-color: black;
+}
+
+.packageContent {
+  background-color: rgba(211, 211, 211, 0.168);
+}
+
+.packageContent .mainContent {
+  margin: 5% 15%;
+  padding: 50px 10px;
+}
+
+.packageContent h2 {
+  text-align: center;
+  text-align: center;
+  width: 55%;
+  margin: 10px auto;
+  font-weight: 800;
+}
+
+.priceCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.priceCard {
+  background-color: white;
+  box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.priceCard1 {
+  background: rgb(23, 23, 28);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 23, 28, 1) 0%,
+    rgb(37, 37, 51) 92%,
+    rgba(5, 50, 59, 1) 100%
+  );
+  color: #fff;
+  box-shadow: 0 8px 8px -4px lightblue;
+}
+
+.priceCard,
+.priceCard1 {
+  margin: 5px 15px;
+  text-align: center;
+  padding: 20px 45px;
+}
+
+.priceCard1 p {
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+.priceCard p {
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+.headin {
+  color: rgb(179, 13, 38);
+  font-weight: 800;
+}
+
+.headin1 {
+  font-weight: 800;
+}
+
+.packageContent button {
+  padding: 7px 15px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(198, 6, 35);
+  color: white;
+}
+
+.packageContent button:hover {
+  background-color: rgb(121, 5, 23);
+}
+
+@media (max-width: 720px) {
+  .packageContent .mainContent {
+    margin: 5% 10%;
+  }
+  .mainContent h2 {
+    width: 100%;
+  }
+  .priceCards {
+    flex-direction: column;
+  }
+  .imageContent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 13%;
+  }
+  .serviceContent h2 {
+    width: 100%;
+  }
+  .challengeContent h2 {
+    width: 80%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container h1 {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1028px) {
+  body {
+    overflow-x: hidden;
+  }
+  .priceCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 10%;
+  }
+  .imageContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .serviceContent h2 {
+    width: 100%;
+  }
+  .challengeContent h2 {
+    width: 75%;
+  }
+  .main {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .main img {
+    width: 50%;
+  }
+  .container h1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

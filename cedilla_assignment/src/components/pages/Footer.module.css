@@ -1,0 +1,50 @@
+.container {
+  background: rgb(17, 17, 50);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 50, 1) 0%,
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 2, 32, 1) 64%
+  );
+}
+
+.footer {
+  margin: 2% 15% 0 15%;
+  display: flex;
+  padding: 5% 20px;
+}
+
+.main {
+  flex: 1;
+}
+
+.main svg {
+  margin: 0 10px;
+}
+
+.main h2 {
+  font-weight: 700;
+}
+
+.main li {
+  list-style: square;
+}
+
+.main h4 {
+  border-bottom: 1px solid rgba(85, 84, 84, 0.774);
+  width: 80%;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 992px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

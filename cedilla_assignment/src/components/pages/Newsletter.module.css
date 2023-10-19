@@ -1,0 +1,92 @@
+.container {
+  margin: 0 15%;
+}
+
+.container p {
+  text-align: center;
+  color: rgb(192, 0, 0);
+}
+
+.container h2 {
+  color: black;
+  text-align: center;
+  font-weight: 700;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 5% 0;
+}
+
+.list img {
+  width: 325px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.list p {
+  color: gray;
+  text-align: left;
+}
+
+.list div {
+  color: black;
+  font-weight: 600;
+}
+
+.subscribe {
+  background-color: rgba(128, 128, 128, 0.136);
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.subscribe div {
+  flex: 1;
+}
+.subscribe h6 {
+  color: black;
+  font-weight: 700;
+}
+
+.subscribe p {
+  color: gray;
+}
+
+.subscribe input {
+  padding: 7px;
+  width: 80%;
+}
+
+.subscribe button {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(198, 6, 35);
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .lists {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1028px) {
+  .lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+  }
+}
